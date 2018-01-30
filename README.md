@@ -1,2 +1,8 @@
 # Python3-PoW
-Learning simple PoW with Python3
+Simple PoW with Python3
+
+## requirements
+- python3
+
+## run
+`python3 pow.py`
