@@ -22,7 +22,7 @@ def generate_answer_attempt(challenge=config["challenge"], size=config["size"]):
     return answer, attempt
 
 
-def proof_of_work(shaHash=config["shaHash"]):
+def do_work(shaHash=config["shaHash"]):
     while True:
         answer, attempt = generate_answer_attempt()
         shaHash.update(attempt.encode())
@@ -33,7 +33,7 @@ def proof_of_work(shaHash=config["shaHash"]):
 
 if __name__ == "__main__":
     start = time.time()
-    answer = proof_of_work()
+    answer = do_work()
     stop = time.time()
     print("Challenge: {0}".format(config["challenge"]))
     print("Difficulty: {0}".format(config["resulting_zeros"]))
